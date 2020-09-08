@@ -2,7 +2,38 @@
 <head> <title> Realizar Suma  </title> </head>
 <center> <h1> Realizar suma </h1>
 <body bgcolor="green">
-<h2></h2>
+<h2>Sumar 2 numeros</h2>
 
+<div>
+  <label>Numero 1: </label>
+  <input id="num1"><br> 
+</div>
+
+<div>
+  <label>Numero 2: </label>
+  <input id="num2"><br> 
+</div>
+
+ <p id="resultado"></p>
+ <button type="button" onclick="Suma()">Sumar</button>
+
+
+<script>
+function Suma()
+        {
+     var resp, num1,num2, text;
+            num1 = document.getElementById("num1").value;
+            num2 = document.getElementById("num2").value;
+            
+            if (parseFloat(num1)==null || parseFloat(num2)==null) {
+                text = "Es necesarios introducir los dos lados"; 
+            }else{
+                resp=parseFloat(num1)+parseFloat(num2); 
+                text="resultado= "+resp;
+            }
+            document.getElementById("resultado").innerHTML = text;
+        }
+</script>
+ </center>
 </body>
 </html> 
