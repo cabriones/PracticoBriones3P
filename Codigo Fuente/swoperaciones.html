@@ -17,6 +17,23 @@
  <p id="resultado"></p>
  <button type="button" onclick="Suma()">Sumar</button>
 
+<br>
+<br>
+
+<h2>Sumar 2 numeros primos</h2>
+
+<div>
+  <label>Numero 1: </label>
+  <input id="nump1"><br> 
+</div>
+
+<div>
+  <label>Numero 2: </label>
+  <input id="nump2"><br> 
+</div>
+
+ <p id="resultado2"></p>
+ <button type="button" onclick="SumaPrimos()">SumarPrimos</button>
 
 <script>
 function Suma()
@@ -33,6 +50,39 @@ function Suma()
             }
             document.getElementById("resultado").innerHTML = text;
         }
+
+function SumaPrimos()
+        {
+
+            var resp2, nump1,nump2, text2,valida;
+            nump1 = document.getElementById("nump1").value;
+            nump2 = document.getElementById("nump2").value;
+            nump1=parseFloat(nump1);
+            nump2=parseFloat(nump2);
+            valida=1;
+            for (var i=2; i<nump1; i++) {
+		        if (nump1%i==0) {
+		            valida=0;
+		        }
+		    }
+		    for (var j=2; j<nump2; j++) {
+		        if (nump2%j==0) {
+		            valida=0;
+		        }
+		    }
+
+            if (valida>0) {
+                 resp2=nump1+nump2;
+                 text2="resultado= "+resp2;
+
+            }else{
+                text2 = "Es necesarios introducir los dos numeros primos";
+            }
+            document.getElementById("resultado2").innerHTML = text2;
+        }
+
+ 
+
 </script>
  </center>
 </body>
